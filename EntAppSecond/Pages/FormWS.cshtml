@@ -1,0 +1,44 @@
+﻿@page
+@model EntAppSecond.Pages.FormWSModel
+@{
+    ViewData["Title"] = "FormWS";
+}
+
+<h2>FormWS</h2>
+
+<form method="post">
+
+    <div>
+
+        <div>    <label asp-for=ProductCode>Product Code</label></div>
+
+        <div>     <input asp-for=ProductCode type="text" aria-describedby="Product Code please" placeholder="id here" />   </div>
+    </div>
+    <br />
+    <fieldset>
+        <legend>Colours</legend>
+
+        <div class="radio">
+            <label asp-for=Colour><input asp-for=Colour value="Red" type="radio" name="optradio">RED</label>
+        </div>
+        <div class="radio">
+            <label asp-for=Colour><input asp-for=Colour Value="Yellow" type="radio" name="optradio">Yellow</label>
+        </div>
+        <div class="radio">
+            <label asp-for=Colour><input asp-for=Colour value="Black" type="radio" name="optradio">Black</label>
+        </div>
+    </fieldset>
+
+    <div class="checkbox">
+        <label asp-for=Consent><input asp-for=Consent type="checkbox" value="">I consent to everything</label>
+    </div>
+
+    <br />
+    <button type="button" class="btn btn-success">Submit</button>
+    
+
+</form>
+
+@Model.Message
+<p>@Model.Message1
+    </p><p>@Model.Message2</p>

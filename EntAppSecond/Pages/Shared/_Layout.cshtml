@@ -13,11 +13,38 @@
 </head>
 <body>
 
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a asp-page="/Index" class="navbar-brand">BootStrap exercises</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a asp-page="/FormWS">FormWS</a></li>
+                    <li><a asp-page="/Task2FormWS2">Task2FormWS</a></li>
+                    <li><a asp-page="/Task3FormWS3">Task3FormWS</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
     <div class="container body-content">
         @RenderBody()
         <hr />
+
+
+
+
+
         <footer>
-            <p>&copy; 2019 - Una's Great Site</p>
+            <p>&copy; 2019 - it's a Great Site</p>
         </footer>
     </div>
 
