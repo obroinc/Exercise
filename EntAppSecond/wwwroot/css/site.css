@@ -17,3 +17,12 @@ body {
     background-color:lightblue;
     border: solid;
 }
+.field-valaidation-error {
+    color: red;
+    font-size: 80%;
+    font-style: inherit;
+}
+
+.validation-summary-errors {
+    border: solid red;
+}

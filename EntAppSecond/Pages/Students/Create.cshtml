@@ -7,28 +7,66 @@
 <h2>Create</h2>
 
 <form method="post">
-<div>
-    <label asp-for=Student.FirstName></label>
-    <input asp-for=Student.FirstName >
+    <div>
+        <label asp-for=Student.FirstName></label>
+        <input asp-for=Student.FirstName>
 
-</div>
+    </div>
 
-<div>
-    <label asp-for=Student.LastName></label>
-    <input asp-for=Student.LastName >
+    <div>
+        <label asp-for=Student.LastName></label>
+        <input asp-for=Student.LastName>
 
-</div>
-<div>
-    <label asp-for=Student.StudentID></label>
-    <input asp-for=Student.StudentID  >
-       
-</div>
+    </div>
+    <div>
+        <label asp-for=Student.StudentID></label>
+        <input asp-for=Student.StudentID placeholder="S1234567">
 
+    </div>
+
+    <div>
+        <label asp-for=Student.DOB></label>
+        <input asp-for=Student.DOB placeholder="dd-mm-yyyy">
+
+    </div>
+    <div>
+        <label asp-for=Student.DateOfBirth></label>
+        <input asp-for=Student.DateOfBirth placeholder="dd-mm-yyyy">
+
+    </div>
+
+    <div>
+        <label asp-for=Student.NumberOfModules></label>
+
+        <select asp-for=Student.NumberOfModules>
+
+            <option value="0"> 0</option>
+            <option value="1"> 1</option>
+            <option value="2"> 2</option>
+            <option value="3"> 3</option>
+        </select>
+    </div>
+    <div>
+        <label asp-for=Student.Height></label>
+        <input asp-for=Student.Height placeholder="Height in cm">
+
+    </div>
+
+    <div>
+        <label asp-for=Student.Email></label>
+        <input asp-for=Student.Email placeholder="Email here please">
+
+    </div>
+    <div>
+        <label asp-for=Student.ConfirmEmail></label>
+        <input asp-for=Student.ConfirmEmail placeholder="Email here please">
+
+    </div>
     <div asp-validation-summary="All"></div>
 
     <div><span asp-validation-for="Student.StudentID"></span></div>
-    
-<button type="submit">Press me</button>
+
+    <button type="submit">Press me</button>
 
 </form>
 
