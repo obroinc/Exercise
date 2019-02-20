@@ -50,16 +50,21 @@ namespace EntAppSecond.Pages.Models
         [RegularExpression(@"")]
         [Required]
         [DataType(DataType.EmailAddress)]
-        public string Email { get; set; }="";
+        public string Email { get; set; }
 
 
         //https//docs.microsoft.com/en-us/dotnet/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format
         //email Confrim property
 
 
-        // [Compare(Email)]
+      
+
         [Required]
         [DataType(DataType.EmailAddress)]
+
         public String ConfirmEmail { get; set; } = "";
+
+       // [Compare(public String ConfirmEmail { get; set; } = "";). Equals(Student.Email)]
     }
+
 }
