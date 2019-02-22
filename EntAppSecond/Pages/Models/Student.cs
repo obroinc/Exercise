@@ -13,27 +13,29 @@ namespace EntAppSecond.Pages.Models
         [RegularExpression(@"(S|s)\d{7}")]
         [Required ]
         public string StudentID { get; set; } = "";
-        
-        [Required]
-     
+
+        [RegularExpression(@"\w\'-,\s]{2,}")]
+        [Required(ErrorMessage = "Please enter your First Name")]
         [Display(Name = "First Name")]
         [StringLength(60, MinimumLength = 2)]
         public string FirstName { get; set; } = "";
 
-        // [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$")]
-        //[StringLength(60, MinimumLength = 3)]
+        
         // [Range(1, 100)]
-        [Required]
+        [RegularExpression(@"\w\'-,\s]{2,}")]
+        [Required(ErrorMessage = "Please enter your Last Name")]
         [StringLength(60, MinimumLength = 3)]//least number of 3 characters in the string
         public string LastName { get; set; } = "";
-        
+
+
+      
         [Required(ErrorMessage ="Please enter date in format dd-mm-yyyy")]//error message given, not needed as its not a text field
         [DataType(DataType.Date)]
         public DateTime DOB { get; set; }
 
 
         //date put in a text box
-        [Required]
+        [Required(ErrorMessage = "Please enter your email")]
         [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime DateOfBirth { get; set; }
 
@@ -42,13 +44,14 @@ namespace EntAppSecond.Pages.Models
         public int NumberOfModules { get; set; }
 
         [Range(50, 250)]//sets range from 50 to 250
-        [Required]
+        [Required(ErrorMessage = "Please enter your height, it must be between 50 and 250 cm")]
         public int Height { get; set; } 
 
 
         //email property
-        [RegularExpression(@"")]
-        [Required]
+        //[RegularExpression(@"")]
+
+        [Required(ErrorMessage = "Please enter your email")]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 

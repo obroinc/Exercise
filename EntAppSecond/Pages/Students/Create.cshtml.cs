@@ -12,6 +12,7 @@ namespace EntAppSecond.Pages
     {
 
         public string Message { get; set; }
+        public string Message1 { get; set; }
 
         [BindProperty]
         public Student Student { get; set; }
@@ -25,13 +26,14 @@ namespace EntAppSecond.Pages
             Message = "post has just happened";
 
             if (ModelState.IsValid)
-            {
+           {
                 Message += "and all is well with the world";
             }
             else
             {
-                Message+="Heuston WE HAVE A PROBLEM";
+Message+="Heuston WE HAVE A PROBLEM";
             }
+
         }
     }
 }
