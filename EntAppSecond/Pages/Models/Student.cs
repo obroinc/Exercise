@@ -20,37 +20,39 @@ namespace EntAppSecond.Pages.Models
         [StringLength(60, MinimumLength = 2)]
         public string FirstName { get; set; } = "";
 
-        
-        // [Range(1, 100)]
+
+        [Display(Name = "Last Name")]
         [RegularExpression(@"\w\'-,\s]{2,}")]
         [Required(ErrorMessage = "Please enter your Last Name")]
         [StringLength(60, MinimumLength = 3)]//least number of 3 characters in the string
         public string LastName { get; set; } = "";
 
 
-      
+        [Display(Name = "DOB")]
         [Required(ErrorMessage ="Please enter date in format dd-mm-yyyy")]//error message given, not needed as its not a text field
         [DataType(DataType.Date)]
         public DateTime DOB { get; set; }
 
 
         //date put in a text box
-        [Required(ErrorMessage = "Please enter your email")]
+       
         [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime DateOfBirth { get; set; }
 
 
         [Required]
+        [Display(Name = "Number of Modules")]
         public int NumberOfModules { get; set; }
 
         [Range(50, 250)]//sets range from 50 to 250
+        [Display(Name = "Height please")]
         [Required(ErrorMessage = "Please enter your height, it must be between 50 and 250 cm")]
-        public int Height { get; set; } 
+        public int Height { get; set; }
 
 
         //email property
         //[RegularExpression(@"")]
-
+        [Display(Name = "email")]
         [Required(ErrorMessage = "Please enter your email")]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
@@ -63,9 +65,9 @@ namespace EntAppSecond.Pages.Models
       
 
         [Required]
+        [Display(Name = "Confirm email")]
         [DataType(DataType.EmailAddress)]
-
-        public String ConfirmEmail { get; set; } = "";
+                public String ConfirmEmail { get; set; } = "";
 
        // [Compare(public String ConfirmEmail { get; set; } = "";). Equals(Student.Email)]
     }
