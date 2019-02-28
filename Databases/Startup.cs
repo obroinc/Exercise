@@ -31,15 +31,18 @@ namespace Databases
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-           
+
 
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            NewMethod(services);
 
+        }
+
+        private static void NewMethod(IServiceCollection services)
+        {
             services.AddDbContext<StudentContext>(options => options.UseInMemoryDatabase("mytempdb"));
-
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
