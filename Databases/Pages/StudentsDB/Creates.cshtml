@@ -1,0 +1,30 @@
+﻿@page
+@model Databases.Pages.StudentsDB.CreatesModel
+@{
+    ViewData["Title"] = "Creates";
+}
+
+<h2>Creates</h2>
+
+<form method="post">
+    <div>
+        <label asp-for=Student.FirstName></label>
+        <input asp-for=Student.FirstName>
+
+    </div>
+
+    <div>
+        <label asp-for=Student.LastName></label>
+        <input asp-for=Student.LastName>
+
+    </div>
+    <div>
+        <label asp-for=Student.StudentID></label>
+        <input asp-for=Student.StudentID placeholder="S1234567">
+
+    </div>
+
+    <div asp-validation-summary="All"></div>
+
+    <button type="submit">Press me</button>
+    </form>
