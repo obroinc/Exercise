@@ -6,7 +6,7 @@ using Databases.Pages.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Databases.Pages.Students
+namespace Databases.Pages.Studentsdb
 {
     public class CreateModel : PageModel
     {
