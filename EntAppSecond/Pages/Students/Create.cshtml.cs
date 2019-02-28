@@ -14,7 +14,7 @@ namespace EntAppSecond.Pages
         public string Message { get; set; }
         public string Message1 { get; set; }
 
-        [BindProperty]
+       [BindProperty]
         public Student Student { get; set; }
 
         public void OnGet()

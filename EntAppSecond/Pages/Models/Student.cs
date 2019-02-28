@@ -22,7 +22,7 @@ namespace EntAppSecond.Pages.Models
         [Display(Name = "First Name")]
         [StringLength(60, MinimumLength = 2)]//min of 2 characters
         public string FirstName { get; set; } = "";
-
+        
 
         [Display(Name = "Last Name")]
         [RegularExpression(@"\w\'-,\s]{2,}")]//also @.(3,) gives  min of 3 char

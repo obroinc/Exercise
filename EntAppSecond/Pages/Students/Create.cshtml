@@ -6,12 +6,13 @@
 
 <h2>Create</h2>
 
-<form method="post">
-    <div>
-        <label asp-for=Student.FirstName></label>
-        <input asp-for=Student.FirstName>
 
-    </div>
+        <form method="post">
+            <div>
+                <label asp-for=Student.FirstName></label>
+                <input asp-for=Student.FirstName>
+
+            </div>
 
     <div>
         <label asp-for=Student.LastName></label>
@@ -68,8 +69,8 @@
 
     <button type="submit">Press me</button>
 
-</form>
+    </form>
 
-@Model.Message
+    @Model.Message
 
-@Model.Message1
+    @Model.Message1

@@ -1,0 +1,33 @@
+﻿@page
+@model EntAppSecond.Pages.CreateStudentModel
+@{
+    ViewData["Title"] = "CreateStudent";
+}
+
+<h2>CreateStudent</h2>
+
+<form method="post">
+
+
+    <div asp-validation-summary="All"></div>
+
+    <div>
+        <label asp-for=Studentdb.FirstName></label>
+        <input asp-for=Studentdb.FirstName />
+    </div>
+
+    <div asp-validation-summary="All"></div>
+
+    <div>
+        <label asp-for=Studentdb.LastName></label>
+        <input asp-for=Studentdb.LastName />
+    </div><div asp-validation-summary="All"></div>
+
+    <div>
+        <label asp-for=Studentdb.StudentID></label>
+        <input asp-for=Studentdb.StudentID />
+    </div>
+
+    <button type="submit">Press me please</button>
+</form>
+
