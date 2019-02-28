@@ -4,27 +4,20 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace EntAppSecond.Pages.Models
+namespace Databases.Pages.Model
 {
-    public class Studentdb
+    public class Student
     {
-
-
         [Required]
-        [Display(Name = "First Name")]//Message diaplayed for user-lable
-        
+        [Display(Name="First Name")]
         public string FirstName { get; set; } = "";
 
         [Required]
-        [Display(Name = "Last Name")]//Message diaplayed for user-lable
-
+        [Display(Name ="Second Name")]
         public string LastName { get; set; } = "";
 
         [Required]
-        [Display(Name = "StudentID")]//Message diaplayed for user-lable
-
+        [Display(Name ="Student ID")]
         public string StudentID { get; set; } = "";
-
-
     }
 }
