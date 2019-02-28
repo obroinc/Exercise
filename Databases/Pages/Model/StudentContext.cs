@@ -7,5 +7,7 @@ namespace Databases.Pages.Model
 {
     public class StudentContext
     {
+        public object Students { get; internal set; }
+
     }
 }

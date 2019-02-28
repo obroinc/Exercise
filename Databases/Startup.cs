@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
+
 namespace Databases
 {
     public class Startup
@@ -33,7 +34,7 @@ namespace Databases
             });
 
 
-            //services.AddDbContext<StudentContext>(options => options.UseInMemoryDatabase("mytempdb"));
+           // services.AddDbContext<StudentContext>(options => options.UseInMemoryDatabase("mytempdb"));
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
